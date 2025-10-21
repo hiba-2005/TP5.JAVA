@@ -6,13 +6,14 @@ Chaque dossier correspond à un **exercice de TP (Travail Pratique)** indépenda
 ---
 
 ## 📂 Structure du projet
+```bash
 TP5.JAVA/
 │
 ├── TPInheritance/ → Héritage et polymorphisme avec les comptes bancaires
 ├── TP5Exercice2/ → Gestion d’un zoo (héritage + tableau dynamique)
 ├── TPParcVehicules/ → Parc de véhicules (héritage multi-niveaux + composition)
 └── TPBibliotheque/ → Gestion d’une bibliothèque (héritage + encapsulation)
-
+```
 
 ---
 
@@ -27,7 +28,9 @@ TP5.JAVA/
 ## 🧠 Détails des exercices
 
 ### 🏦 1. TPInheritance — Hiérarchie de Comptes Bancaires
-Objectif : modéliser une hiérarchie simple de comptes (héritage concret).  
+
+Objectif : modéliser une hiérarchie simple de comptes (héritage concret). 
+
 **Classes principales :**
 - `Compte`
 - `CompteEpargne`
@@ -35,36 +38,121 @@ Objectif : modéliser une hiérarchie simple de comptes (héritage concret).
 
 Fonctionnalités : dépôts, retraits, découvert autorisé, application d’intérêts, polymorphisme.
 
+### ▶️ Exemple d’exécution :
+```bash
+Compte #1 — solde = 1000.0
+Compte #1 : dépôt de 200.0
+Compte #1 : retrait impossible (solde insuffisant)
+CompteEpargne #2 — solde = 500.0, taux = 3.0%
+CompteCourant #3 — solde = 200.0, découvert autorisé = 300.0
+```
+
 ---
 
 ### 🐾 2. TP5Exercice2 — Gestion d’un Zoo
-Objectif : pratiquer l’héritage et le polymorphisme avec des animaux.  
-**Classes principales :**
-- `Animal`, `Mammifere`, `Oiseau`, `Reptile`
-- `Zoo` (tableau dynamique d’`Animal`)
 
-Permet d’ajouter, afficher et manipuler plusieurs types d’animaux dans un zoo.
+Objectif : pratiquer l’héritage et le polymorphisme avec des animaux.
+
+**Classes principales :**
+- `Animal` (classe de base)
+- `Mammifere`, `Oiseau`, `Reptile` (sous-classes)
+- `Zoo` (tableau dynamique d’animaux)
+- `Main` (programme de test)
+- 
+### ⚙️ Fonctionnalités :
+- Ajout dynamique d’animaux dans un tableau  
+- Affichage détaillé (`toString()`)  
+- Méthodes spécifiques (`voler()`, `allaiter()`, `seChauffer()`)
+
+  ### ▶️ Exemple d’exécution :
+  
+```bash
+Le zoo contient 6 animaux :
+
+Lion (Mammifère)
+
+Aigle (Oiseau)
+
+Crocodile (Reptile)
+
+Girafe (Mammifère)
+
+Perroquet (Oiseau)
+
+Serpent (Reptile)
+Éléphant allaite ses petits.
+Autruche s'envole avec une envergure de 1.8 m.
+```
+
 
 ---
 
 ### 🚗 3. TPParcVehicules — Gestion d’une Flotte de Véhicules
-Objectif : mettre en œuvre l’héritage multi-niveaux et la composition (classe `Moteur`).  
-**Classes :**
-- `Vehicule`, `Motorise`, `Voiture`, `Camion`, `Moto`, `VoitureElectrique`, `Flotte`
 
-Simulation de trajets, consommation, recharge, distance totale parcourue.
+
+### 🎯 Objectif :
+Illustrer un héritage multi-niveaux et la composition d’objets (`Moteur` dans `Motorise`).
+
+### 📚 Classes principales :
+- `Vehicule`, `Motorise`
+- `Voiture`, `Camion`, `Moto`, `VoitureElectrique`
+- `Moteur`
+- `Flotte` (tableau dynamique)
+- `Main`
+
+### ⚙️ Fonctionnalités :
+- Démarrage, roulage et ravitaillement  
+- Gestion du carburant ou de la batterie  
+- Calcul de la distance totale parcourue par la flotte
+
+### ▶️ Exemple d’exécution :
+``` bash
+Flotte (4 véhicules) :
+
+Clio (Essence 75ch)
+
+Volvo FH (Diesel 400ch)
+
+Harley (Essence 90ch)
+
+Tesla Model 3 (Élec 300ch)
+
+Clio roule 100 km, reste 40.0 unités
+Tesla roule 300 km, reste 55.0 kWh
+Distance totale parcourue : 880 km
+```
 
 ---
 
 ### 📚 4. TPBibliotheque — Gestion d’une Bibliothèque
-Objectif : combiner héritage, encapsulation et tableaux d’objets.  
-**Classes :**
-- `Document`, `Livre`, `Roman`, `Manuel`, `Revue`, `Dictionnaire`, `Bibliotheque`
 
-Fonctionnalités :
-- Ajouter / supprimer / rechercher un document
-- Afficher les auteurs
-- Menu interactif console
+### 🎯 Objectif :
+Combiner héritage, encapsulation et gestion d’un tableau de documents.
+
+### 📚 Classes principales :
+- `Document` (classe mère)
+- `Livre`, `Roman`, `Manuel`, `Revue`, `Dictionnaire`
+- `Bibliotheque` (tableau de `Document`)
+- `Main` (menu console interactif)
+
+### ⚙️ Fonctionnalités :
+- Ajouter / supprimer / rechercher un document  
+- Afficher tous les documents  
+- Lister les auteurs des ouvrages  
+- Utiliser un **numéro d’enregistrement auto-incrémenté**
+
+### ▶️ Exemple d’exécution :
+```bash
+Capacité de la bibliothèque (n): 5
+Bibliothèque (2/5):
+
+Livre{numEnreg=1, titre='Le Petit Prince', auteur='Saint-Exupéry', pages=96}
+
+Dictionnaire{numEnreg=2, titre='Larousse Poche', langue='Français'}
+
+• Saint-Exupéry — "Le Petit Prince"
+• Camus — "L'Étranger"
+```
 
 ---
 
@@ -80,3 +168,11 @@ Fonctionnalités :
 cd TPBibliotheque/src
 javac com/example/tp/entities/*.java com/example/tp/test/Main.java
 java com.example.tp.test.Main
+```
+
+✨ Auteur
+
+👩‍💻 hiba-2005
+Travaux pratiques réalisés sous Eclipse IDE
+Langage : Java 100%
+Objectifs : Héritage, Polymorphisme, Encapsulation, Composition et Gestion d’objets.
