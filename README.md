@@ -12,7 +12,9 @@ TP5.JAVA/
 ├── TPInheritance/ → Héritage et polymorphisme avec les comptes bancaires
 ├── TP5Exercice2/ → Gestion d’un zoo (héritage + tableau dynamique)
 ├── TPParcVehicules/ → Parc de véhicules (héritage multi-niveaux + composition)
-└── TPBibliotheque/ → Gestion d’une bibliothèque (héritage + encapsulation)
+├── TPBibliotheque/ → Gestion d’une bibliothèque (héritage + encapsulation)
+└──  images/
+
 ```
 
 ---
@@ -46,8 +48,9 @@ Compte #1 : retrait impossible (solde insuffisant)
 CompteEpargne #2 — solde = 500.0, taux = 3.0%
 CompteCourant #3 — solde = 200.0, découvert autorisé = 300.0
 ```
+📸 Résultat visuel
+<div align="center"> <img src="image/Resultat exercice1.jpg" alt="Résultat Exercice 1" width="1000"/> <p><em>Figure 1 — Exemple d’exécution du système de dessin de formes</em></p> </div>
 
----
 
 ### 🐾 2. TP5Exercice2 — Gestion d’un Zoo
 
@@ -83,6 +86,9 @@ Serpent (Reptile)
 Éléphant allaite ses petits.
 Autruche s'envole avec une envergure de 1.8 m.
 ```
+
+📸 Résultat visuel
+<div align="center"> <img src="image/Resultat exercice2.jpg" alt="Résultat Exercice 1" width="1000"/> <p><em>Figure 1 — Exemple d’exécution du système de dessin de formes</em></p> </div>
 
 
 ---
@@ -121,6 +127,8 @@ Clio roule 100 km, reste 40.0 unités
 Tesla roule 300 km, reste 55.0 kWh
 Distance totale parcourue : 880 km
 ```
+📸 Résultat visuel
+<div align="center"> <img src="image/Resultat exercice3.jpg" alt="Résultat Exercice 1" width="1000"/> <p><em>Figure 1 — Exemple d’exécution du système de dessin de formes</em></p> </div>
 
 ---
 
@@ -153,7 +161,18 @@ Dictionnaire{numEnreg=2, titre='Larousse Poche', langue='Français'}
 • Saint-Exupéry — "Le Petit Prince"
 • Camus — "L'Étranger"
 ```
+### ▶️ Résultat d’exécution :
+<p align="center">
+  <img src="image/Resultat exercice4.1.jpg" width="600" alt="Résultat Exercice 4">
+</p>
 
+<p align="center">
+  <img src="image/Resultat exercice4.2.jpg" width="600" alt="Résultat Exercice 4">
+</p>
+
+<p align="center">
+  <img src="image/Resultat exercice4.2.jpg" width="600" alt="Résultat Exercice 4">
+</p>
 ---
 
 ## 🚀 Exécution
